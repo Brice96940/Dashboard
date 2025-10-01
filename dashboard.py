@@ -5,7 +5,16 @@ import streamlit as st
 # ─────────── Sécurité très simple (pas de crypto) ───────────
 # Dans Streamlit Cloud > Settings > Secrets, ajoute par ex.:
 # APP_CODE = "mon-code-super-secret"
-APP_CODE = os.getenv("APP_CODE") or st.secrets.get("APP_CODE", "")
+def safe_secret(key, default=""):
+    v = os.getenv(key)
+    if v:
+        return v
+    try:
+        return st.secrets[key]
+    except Exception:
+        return default
+
+APP_CODE = safe_secret("APP_CODE", "")
 
 # État d'authentification en session
 if "auth" not in st.session_state:
@@ -27,6 +36,7 @@ if not st.session_state.auth:
     login_view()
 
 # ─────────── App une fois connecté ───────────
+
 st.title("📌 Mon Dashboard Perso")
 
 menu = st.sidebar.radio("Navigation", ["Liens", "Objectifs", "Coffre-fort"])
