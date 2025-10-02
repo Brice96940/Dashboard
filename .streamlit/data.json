@@ -1,0 +1,59 @@
+{
+  "links": [
+    {
+      "name": "MOOC Python",
+      "url": "https://www.coursera.org/learn/python",
+      "desc": "Cours Python"
+    },
+
+
+  {
+      "name": "Exercism Python",
+      "url": "https://exercism.org/tracks/python/concepts",
+      "desc": "Exercices Python"
+    },
+
+   
+    {
+      "name": "Perplexity",
+      "url": " https://www.perplexity.ai/",
+      "desc": "IA"
+    },
+
+
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com",
+      "desc": "Profil"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "desc": "Code & projets"
+    }
+  ],
+  "objectives": [
+    {
+      "title": "SmartWeigh",
+      "progress": 70,
+      "deadline": "2025-12-01"
+    },
+    {
+      "title": "MOOC Élec",
+      "progress": 40,
+      "deadline": null
+    }
+  ],
+  "credentials": [
+    {
+      "site": "Gmail",
+      "login": "monemail@gmail.com",
+      "secret_enc": ""
+    },
+    {
+      "site": "Ynov",
+      "login": "brice",
+      "secret_enc": ""
+    }
+  ]
+}
